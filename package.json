@@ -1,0 +1,31 @@
+{
+  "name": "jerry-wong-portfolio",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "devstart": "nodemon ./bin/www"
+  },
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "^4.16.4",
+    "http-errors": "~1.6.3",
+    "jade": "~1.11.0",
+    "morgan": "~1.9.1",
+    "pug": "^2.0.3"
+  },
+  "description": "Portfolio project for Jerry Wong.\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[C",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jewong42/jerry-wong-portfolio.git"
+  },
+  "author": "Jerry Wong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jewong42/jerry-wong-portfolio/issues"
+  },
+  "homepage": "https://github.com/jewong42/jerry-wong-portfolio#readme"
+}
