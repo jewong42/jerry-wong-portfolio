@@ -1,0 +1,11 @@
+html
+  head
+    include ../includes/head.pug
+  body
+    div(class="container-fluid")
+      div(class="row h-100")
+        div(class="col-md-2 h-100 shadow")
+          include ../includes/navigation.pug
+        div(class="col-md-10 h-100" style="overflow-y: scroll;")
+          div(data-spy="scroll" data-target="#nav" data-offset="50")
+            block content

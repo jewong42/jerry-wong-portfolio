@@ -1,5 +1,6 @@
-extends layout
+extends bases/layout.pug
 
 block content
-  h1= title
-  p Welcome to #{title}
+    include includes/intro.pug
+    include includes/about.pug
+    include includes/projects.pug
