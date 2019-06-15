@@ -30,18 +30,3 @@ div(class="modal fade" id="project_modal" tabindex="-1")
             small(id="descrption")
       div(class="modal-footer")
         button(type="button" class="btn btn-secondary" data-dismiss="modal") Close
-
-
-script.
-
-  $('#project_modal').on('show.bs.modal', function (event) {
-    var button = $(event.relatedTarget);
-    var name, element;
-    $(button[0].attributes).each(function() {
-      if (this.nodeName.includes("data")) {
-        name = this.nodeName.slice(5);
-        element = "#" + name;
-        $(element).text(button.data(name));
-      } 
-    });
-  })
