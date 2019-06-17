@@ -1,24 +1,30 @@
-section(id="skills-and-education" class="d-flex flex-column justify-content-center my-5" style="min-height: 100%;")
-  div(id="skills" class="card mx-auto mb-5 w-75")
+div(id="skills-and-education" class="d-flex flex-column justify-content-center align-items-center text-center py-5" style="min-height: 100%;")
+  h2(class="text-center font-weight-normal") Skills and Education
+  h5(class="lead mb-5") Learning to work with others and learn from failures has and continues to make me a better developer. 
+  // Skills
+  div(class="card mb-5 w-75 text-left")
     div(class="card-body")
       h5(class="card-title") Experienced full stack Android, Unity, and web application developer. 
       p(class="card-text")
-        |Worked on four concurrent software engineering projects within three months — Three projects as a 
-        | front-end lead and one as an independent, full stack developer.
+        span I have worked on four concurrent software engineering projects within three months — Three projects as a 
+        span front-end lead and one as an independent, full stack developer.
       hr(class="my-3 mx-5")
+      // Languages
       each level, title in {"Proficient with: ": skills_pw, "Effective with: ": skills_ew, "Worked with: ": skills_ww}
         p(class="text-muted font-weight-light mb-1") #{title}
           each skill, index in level
             - string = (level.length === index + 1 ? "and " + skill.name + "." : skill.name + ", ")
             span(class="font-weight-normal text-info") #{string}
-  div(id="education" class="card mx-auto mb-5 w-75")
+  // Education
+  div(class="card mb-5 w-75 text-left")
     div(class="card-body")
       h5(class="card-title") Computer science graduate.
       p(class="card-text")
-        | Former college dropout who went back to school to complete 62 computer science or upper-division 
+        | I was a former college dropout who went back to school to complete 62 computer science or upper-division 
         | units in my last 3 semesters while working various part-time jobs and raising my GPA from a 1.8 to a 3.1.
       hr(class="my-3 mx-5")
-      div(class="row justify-content-center text-center")
+      // Degrees
+      div(class="row justify-content-center text-center small")
         each degree in education
           div(class="card text-white bg-info mw-50 mx-2 mb-2")
             div(class="card-header") #{degree.school_name}

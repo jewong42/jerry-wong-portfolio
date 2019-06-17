@@ -1,14 +1,14 @@
-section(id="projects" class="d-flex flex-column justify-content-center my-5" style="min-height: 100%;")
-  h1(class="display-4 text-capitalize text-center") Selective projects
-  hr(class="mb-5")
-  div(class="container w-75")
-    div(class="row justify-content-around")
-      each project in projects
-        div(class="col-auto mb-4")
-          div(class="card" style="width: 15rem; height: 27rem")
-            a(href="#")
-              img(class="card-img-top border-bottom" src=project.thumbnail)
-            div(class="card-body d-flex flex-column")
-              h5(class="card-title") #{project.name}
-              small(class="card-text") #{project.description_short}
-              button(class="btn btn-primary btn-sm text-capitalize mt-auto" type="button" data-toggle="modal" data-target="#project_modal" data-name=project.name data-role=project.role data-tech=project.tech data-language=project.language data-descrption=project.description_long) More info
+section(id="projects" class="d-flex flex-column justify-content-center align-items-center text-center py-5" style="min-height: 100%;")
+  h2(class="text-center font-weight-normal") Selective Projects
+  h5(class="lead mb-5") I am meticulous with my work and take immense pride in all the code I contribute.
+  // Projects
+  div(class="row justify-content-around text-left w-75")
+    each project in projects
+      div(class="col-auto mb-4")
+        div(class="card" style="width: 15rem; height: 25rem")
+          a(href="" data-toggle="modal" data-target="#project_modal" data-name=project.name data-role=project.role data-tech=project.tech data-language=project.language data-descrption=project.description_long)
+            img(class="card-img-top border-bottom" src=project.thumbnail)
+          div(class="card-body d-flex flex-column py-3")
+            h6(class="card-title mb-1") #{project.name}
+            small(class="card-text") #{project.description_short}
+            button(class="btn btn-outline-info btn-sm text-capitalize mt-auto" type="button" data-toggle="modal" data-target="#project_modal" data-name=project.name data-role=project.role data-tech=project.tech data-language=project.language data-descrption=project.description_long) More info
