@@ -1,27 +1,27 @@
 html
   head
     include ../includes/head.pug
-  body
-    div(class="container-fluid")
-      div(class="row h-100")
-        div(class="col-md-2 h-100 shadow")
+  body(class="container-fluid" data-spy="scroll" data-target="#nav" data-offset="50")
+    div(class="row h-100")
+      div(class="col-md-2 h-100 position-fixed shadow")
           include ../includes/navigation.pug
-        div(id="content" class="col-md-10 h-100" data-spy="scroll" data-target="#nav" data-offset="0" style="overflow-y: scroll;")
-          block content
+      div(class="col-md-10 h-100 offset-2")
+        block content
 
 script.
-  $("#nav a").on('click', function(event) {
+  $("#nav a").on("click", function(event) {
     if (this.hash !== "") {
       event.preventDefault();
       var hash = this.hash;
-      $("#content").animate({
+      $("html, body").animate({
         scrollTop: $(hash).offset().top
-      }, 2000, function(){
+      }, 800, function(){
+        window.location.hash = hash;
       });
     }
   });
 
-  $('#project_modal').on('show.bs.modal', function (event) {
+  $("#project_modal").on("show.bs.modal", function (event) {
     var button = $(event.relatedTarget);
     var name, element;
     $(button[0].attributes).each(function() {
