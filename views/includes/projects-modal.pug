@@ -4,29 +4,21 @@ div(class="modal fade" id="project_modal" tabindex="-1")
       div(class="modal-header")
         button(type="button" class="close" data-dismiss="modal") &times;
       div(class="modal-body")
-        div(class="row m-2")
-          div(class="col-7")
+        div(class="d-flex flex-row justify-content-center align-items-center")
+          div(class="col-8 justify-content-center")
             div(id="project_media" class="carousel slide" data-ride="carousel" data-interval="false")
-              div(class="carousel-inner")
-                //- Todo: Replace hard-coded images with sql data.
-                div(class="carousel-item active")
-                  img(class="d-block w-100" src="https://via.placeholder.com/350x350")
-                div(class="carousel-item")
-                  img(class="d-block w-100" src="https://via.placeholder.com/350x250")
-                div(class="carousel-item")
-                  img(class="d-block w-100" src="https://via.placeholder.com/350x350")
-                //-
-              a(class="carousel-control-prev" href="#project_media" data-slide="prev")
+              div(id="images" class="carousel-inner")
+              a(class="carousel-control-prev" href="#project_media" data-slide="prev" style="filter: invert(50%);")
                 span(class="carousel-control-prev-icon")
-              a(class="carousel-control-next" href="#project_media" data-slide="next")
+              a(class="carousel-control-next" href="#project_media" data-slide="next" style="filter: invert(50%);")
                 span(class="carousel-control-next-icon")
-          div(class="col-5")
-            h4(id="name" class="mb-3")
+          div(class="col-4")
+            h5(id="name" class="mb-3")
             table(class="table table-sm small table-light")
               each element in ["role", "tech", "language"]
                 tr
                   td(class="text-muted font-weight-light text-uppercase") #{element}
                   td(class="text-info" id=element)
-            small(id="descrption")
+            small(id="description")
       div(class="modal-footer")
         button(type="button" class="btn btn-secondary" data-dismiss="modal") Close
