@@ -2,10 +2,10 @@ html
   head
     include ../includes/head.pug
   body(class="container-fluid" data-spy="scroll" data-target="#nav" data-offset="50")
-    div(class="row h-100 ")
-      div(class="col-md-2 h-100 d-flex flex-column position-fixed shadow")
+    div(class="row h-100")
+      div(class="col-md-2 d-md-flex d-sm-none h-100 d-flex flex-column shadow" style="position: fixed;")
           include ../includes/navigation.pug
-      div(class="col-md-10 h-100 offset-2")
+      div(class="col-md-10 col-sm-12 ml-auto")
         block content
 
 script.

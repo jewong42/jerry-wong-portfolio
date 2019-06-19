@@ -1,24 +1,26 @@
-div(class="modal fade" id="project_modal" tabindex="-1")
-  div(class="modal-dialog modal-dialog-centered modal-lg")
+div(id="project_modal" class="modal fade" tabindex="-1")
+  div(class="modal-dialog modal-dialog-centered modal-xl")
     div(class="modal-content")
       div(class="modal-header")
         button(type="button" class="close" data-dismiss="modal") &times;
       div(class="modal-body")
-        div(class="d-flex flex-row justify-content-center align-items-center")
-          div(class="col-8 justify-content-center align-items-center")
-            div(id="project_media" class="carousel slide" data-ride="carousel" data-interval="false")
+        div(class="row justify-content-center")
+          // - Images
+          div(class="col-md-8 col-sm-12 align-items-center")
+            div(id="image_carousel" class="carousel slide border" data-ride="carousel" data-interval="false")
               div(id="images" class="carousel-inner")
-              a(class="carousel-control-prev" href="#project_media" data-slide="prev" style="filter: invert(50%);")
-                span(class="carousel-control-prev-icon")
-              a(class="carousel-control-next" href="#project_media" data-slide="next" style="filter: invert(50%);")
-                span(class="carousel-control-next-icon")
-          div(class="col-4")
-            h5(id="name" class="mb-3")
+              a(class="carousel-control-prev" href="#image_carousel" data-slide="prev")
+                span(class="carousel-control-prev-icon" style="filter: invert(50%);")
+              a(class="carousel-control-next" href="#image_carousel" data-slide="next")
+                span(class="carousel-control-next-icon" style="filter: invert(50%);")
+          // - Info
+          div(class="col-md-4 col-sm-12  align-items-start  my-3")
+            h5(id="project_name" class="mb-3")
             table(class="table table-sm small table-light")
-              each element in ["role", "tech", "language"]
+              each info in ["role", "tech", "language"]
                 tr
-                  td(class="text-muted font-weight-light text-uppercase") #{element}
-                  td(class="text-info" id=element)
+                  td(class="text-muted font-weight-light text-uppercase") #{info}
+                  td(class="text-info" id=info)
             small(id="description")
       div(class="modal-footer")
         button(type="button" class="btn btn-secondary" data-dismiss="modal") Close
