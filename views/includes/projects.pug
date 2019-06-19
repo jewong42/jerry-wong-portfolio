@@ -1,11 +1,12 @@
-section(id="projects" class="d-flex flex-column justify-content-center align-items-center text-center py-5" style="min-height: 100%;")
+div(id="projects" class="d-flex flex-column justify-content-center align-items-center text-center py-5" style="min-height: 100%;")
+  // - Title
   h2(class="font-weight-normal") Selective Projects
   h(class="mb-5 font-weight-light") I am meticulous with my work and I take immense pride in all code that I contribute.
-  // Projects
+  // - Projects
   div(class="row justify-content-around text-left w-75")
     each project in projects
       div(class="col-auto mb-4")
-        div(class="card" style="width: 15rem; height: 25rem")
+        div(class="card justify" style="width: 15rem; height: 25rem")
           a(href="" data-toggle="modal" data-target="#project_modal" data-project=project)
             img(class="card-img-top border-bottom" src=project.thumbnail)
           div(class="card-body d-flex flex-column py-3")
