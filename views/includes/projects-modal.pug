@@ -7,7 +7,7 @@ div(id="project_modal" class="modal fade" tabindex="-1")
       div(class="modal-body")
         div(class="row justify-content-center")
           // - Images
-          div(class="col-md-8 col-sm-12 align-items-center")
+          div(class="col-md-8 col-sm-12 align-items-center my-auto")
             div(id="image_carousel" class="carousel slide border" data-ride="carousel" data-interval="false")
               div(id="images" class="carousel-inner")
               a(class="carousel-control-prev" href="#image_carousel" data-slide="prev")
@@ -22,7 +22,7 @@ div(id="project_modal" class="modal fade" tabindex="-1")
                 tr
                   td(class="text-muted font-weight-light text-uppercase") #{info}
                   td(class="text-info" id=info)
-            small(id="description")
+            small(id="description" style="white-space: pre-line;")
           // - Footer
       div(class="modal-footer")
         button(type="button" class="btn btn-secondary" data-dismiss="modal") Close
