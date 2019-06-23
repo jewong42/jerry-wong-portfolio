@@ -20,8 +20,11 @@ router.get('/', async function (req, res, next) {
 function getProjectImages(projects) {
   var files;
   for (index in projects) {
-    files = fs.readdirSync("./public/" + projects[index].image_source + "/");
-    projects[index].images = files;
+    try {
+      files = fs.readdirSync("./public/" + projects[index].image_source + "/");
+      projects[index].images = files;
+    } catch(err) {
+    }
   }
 }
 
