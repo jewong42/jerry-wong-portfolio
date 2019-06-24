@@ -31,6 +31,7 @@ script.
     $('#language').text(project.language);
     $('#description').text(project.description_long);
     $('#images').html("");
+    $('#experience').html("");
     for (index in project.images) {
       path = project.image_source + project.images[index];
       if (index < project.images.length - 1 || project.video_source != null) {
@@ -42,6 +43,9 @@ script.
     }
     if (project.video_source != null) {
       $('#images').prepend("<div class='carousel-item active'><div class='embed-responsive embed-responsive-16by9'><iframe class='embed-responsive-item' src='" + project.video_source + "' allowfullscreen></iframe></div></div>");
+    }
+    for(index in project.experience) {
+      $('#experience').append("<li>" + project.experience[index] + "</li>");
     }
   });
 

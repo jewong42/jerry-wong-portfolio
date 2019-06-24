@@ -7,6 +7,7 @@ router.get('/', async function (req, res, next) {
   try {
     var projects = await pool.query('SELECT * FROM projects')
     getProjectImages(projects);
+    getProjectExperience(projects);
     var education = await pool.query('SELECT * FROM education')
     var skills_pw = await pool.query('SELECT * FROM skills WHERE level = "proficient with"')
     var skills_ew = await pool.query('SELECT * FROM skills WHERE level = "experienced with"')
@@ -23,6 +24,17 @@ function getProjectImages(projects) {
     try {
       files = fs.readdirSync("./public/" + projects[index].image_source + "/");
       projects[index].images = files;
+    } catch(err) {
+    }
+  }
+}
+
+function getProjectExperience(projects) {
+  var array;
+  for (index in projects) {
+    try {
+      array = projects[index].experience.split("\n");
+      projects[index].experience = array;
     } catch(err) {
     }
   }

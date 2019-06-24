@@ -17,12 +17,21 @@ div(id="project_modal" class="modal fade" tabindex="-1")
           // - Info
           div(class="col-md-5 col-sm-12 align-items-start my-3")
             h5(id="project_name" class="mb-2")
-            table(class="table table-sm small table-light mb-2")
+            table(class="table table-sm small table-light mb-3")
               each info in ["role", "tech", "language"]
                 tr
                   td(class="text-muted font-weight-light text-uppercase" style="white-space: nowrap; width: 1%;") #{info}:
                   td(class="text-info" id=info)
-            small(id="description" style="white-space: pre-line; line-height: 1.3")
+            nav(class="mb-3")
+              div(class="nav nav-tabs")
+                a(class="nav-item nav-link active text-muted" data-toggle="tab" href="#nav-experience") Experience
+                a(class="nav-item nav-link text-muted" data-toggle="tab" href="#nav-about") About
+            div(class="tab-content")
+              div(class="tab-pane fade show active" id="nav-experience")
+                ul(id="experience" class="small pl-4")
+              div(class="tab-pane fade" id="nav-about")
+                small(id="description" style="white-space: pre-line")
           // - Footer
       div(class="modal-footer")
+        a(href="mailto:jewong42@outlook.com" class="btn btn-outline-info") Ask a Question
         button(type="button" class="btn btn-secondary" data-dismiss="modal") Close
