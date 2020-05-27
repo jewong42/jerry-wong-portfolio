@@ -13,7 +13,7 @@ div(id="skills-and-education" class="d-flex flex-column justify-content-center a
       each level, title in {"Proficient with: ": skills_pw, "Experienced with: ": skills_ew, "Worked with: ": skills_ww}
         p(class="text-muted font-weight-light mb-1") #{title}
           each skill, index in level
-            - string = (level.length === index + 1 ? "and " + skill.name + "." : level.length !== 2 ? skill.name + " " : skill.name + ", ")
+            - string = (level.length === index + 1 ? "and " + skill.name + "." : level.length !== 2 ? skill.name + ", " : skill.name + " ")
             span(class="font-weight-normal text-info") #{string}
   // - Education
   div(class="card mb-5 w-75 text-left")
